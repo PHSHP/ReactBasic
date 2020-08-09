@@ -37,6 +37,9 @@
 
 * react application은 하나의 component만 rendering 한다.
 
+* 구조 분해 할당 : 배열이나 객체 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식이다.  
+  ex) [a, b, ...rest] = [1, 2, 3, 4, 5];
+
 # Props
 
 - -> 부모 컴포넌트가 자식 컴포넌트에게 주는 값
@@ -55,8 +58,9 @@
 - state가 바뀔 때 마다 render가 발생한다.
 
 - state를 직접 명시에서 바꾸면 안된다.
-- state처음에 명시해주고, state를 바꿀떄는 setState를 설정한다.
-- (setState는 DidMount안에 넣어줌)
+- state처음에 명시해주고, state를 바꿀떄는 setState를 설정한다.  
+  (setState로 state를 바꿔줘야 state를 바꾸고, render()함수를 호출한다.)  
+  (setState는 DidMount안에 넣어줌)
 
 - State 변경 방법
 - ex1) this.setState(current => ({ count : current.count + 1})) // 이런 방식이 좋음
